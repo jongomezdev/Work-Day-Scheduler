@@ -1,3 +1,5 @@
+const saveBtn = $(".saveBtn");
+
 ////// Implement Current Day
 $("#currentDay").text(
   luxon.DateTime.local().toLocaleString({
@@ -12,7 +14,6 @@ $("#currentDay").text(
 
 function timeBlockEl() {
   let hourEl = luxon.DateTime.local().toLocaleString({ hour: "2-digit" });
-
   let formattedHour = parseInt(hourEl[0] + hourEl[1]);
   if (hourEl.indexOf("PM")) {
     formattedHour += 12;
@@ -20,7 +21,6 @@ function timeBlockEl() {
   }
   // console.log(formattedHour);
   console.log(hourEl);
-
   $(".time-block").each(function () {
     let currentHour = parseInt($(this).attr("id"));
     // console.log(currentHour);
@@ -34,5 +34,9 @@ function timeBlockEl() {
   });
 }
 //When save button is clicked, store input to local storage
+
+saveBtn.on("click", function () {
+  alert("STOP CLICKING ME");
+});
 
 timeBlockEl();
