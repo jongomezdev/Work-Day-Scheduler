@@ -1,3 +1,4 @@
+// **************** Grab DOM Elements ******************
 const saveBtn = $(".saveBtn");
 
 ////// Implement Current Day
@@ -17,7 +18,7 @@ function timeBlockEl() {
   let formattedHour = parseInt(hourEl[0] + hourEl[1]);
   if (hourEl.indexOf("PM")) {
     formattedHour += 12;
-    console.log(formattedHour);
+    // console.log(formattedHour);
   }
   // console.log(formattedHour);
   console.log(hourEl);
@@ -36,7 +37,11 @@ function timeBlockEl() {
 //When save button is clicked, store input to local storage
 
 saveBtn.on("click", function () {
-  alert("STOP CLICKING ME");
+  let time = $(this).siblings(".hour").text();
+  let usrTxt = $(this).siblings(".usrTxt").val();
+  // console.log(usrTxt);
+  // console.log(time);
+  localStorage.setItem(time, usrTxt);
 });
 
 timeBlockEl();
