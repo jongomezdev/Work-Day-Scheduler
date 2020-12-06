@@ -6,3 +6,10 @@ $("#currentDay").text(
     day: "2-digit",
   })
 );
+
+let currentTime = luxon.DateTime.local().toLocaleString({
+  hour: "2-digit",
+  minute: "2-digit",
+});
+
+console.log(currentTime);
