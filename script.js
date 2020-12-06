@@ -7,9 +7,10 @@ $("#currentDay").text(
   })
 );
 
-let currentTime = luxon.DateTime.local().toLocaleString({
+//Create a function that styles the timeblocks in real time
+//past, present & future
+let currentTime = luxon.DateTime.local({
   hour: "2-digit",
-  minute: "2-digit",
 });
 
-console.log(currentTime);
+//When save button is clicked, store input to local storage
