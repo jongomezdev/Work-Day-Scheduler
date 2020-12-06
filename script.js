@@ -44,4 +44,18 @@ saveBtn.on("click", function () {
   localStorage.setItem(time, usrTxt);
 });
 
+// Create a function to keep local storage on page reload
+
+function storeEl() {
+  $(".hour").each(function () {
+    let currentHour = $(this).text();
+    let storedTxt = localStorage.getItem(currentHour);
+
+    if (storedTxt !== null) {
+      $(this).siblings(".usrTxt").val(storedTxt);
+    }
+  });
+}
+
 timeBlockEl();
+storeEl();
