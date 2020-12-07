@@ -36,4 +36,4 @@ Available for clone or download.
 
 The following animation demonstrates the application functionality:
 
-![day planner demo](Demo/05-third-party-apis-homework-demo.gif)
+![day planner demo](Demo\Work-Day-Scheduler.gif)

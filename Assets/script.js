@@ -18,7 +18,7 @@ function timeBlockEl() {
   let formattedHour = parseInt(hourEl[0] + hourEl[1]);
   if (hourEl.indexOf("PM")) {
     formattedHour += 12;
-    // console.log(formattedHour);
+    console.log(formattedHour);
   }
   // console.log(formattedHour);
   // console.log(hourEl);
