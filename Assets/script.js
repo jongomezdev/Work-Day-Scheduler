@@ -21,7 +21,7 @@ function timeBlockEl() {
     // console.log(formattedHour);
   }
   // console.log(formattedHour);
-  console.log(hourEl);
+  // console.log(hourEl);
   $(".time-block").each(function () {
     let currentHour = parseInt($(this).attr("id"));
     // console.log(currentHour);
@@ -54,8 +54,10 @@ function storeEl() {
     if (storedTxt !== null) {
       $(this).siblings(".usrTxt").val(storedTxt);
     }
+    // console.log(storedTxt);
   });
 }
 
+// *************** Call Functions ****************
 timeBlockEl();
 storeEl();
