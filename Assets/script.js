@@ -14,12 +14,11 @@ $("#currentDay").text(
 //past, present & future
 
 function timeBlockEl() {
-  let hourEl = luxon.DateTime.local().toLocaleString({ hour: "2-digit" });
+  let hourEl = luxon.DateTime.local().toLocaleString({
+    hour: "2-digit",
+    hour12: false,
+  });
   let formattedHour = parseInt(hourEl[0] + hourEl[1]);
-  if (hourEl.indexOf("PM")) {
-    formattedHour += 12;
-    console.log(formattedHour);
-  }
   // console.log(formattedHour);
   // console.log(hourEl);
   $(".time-block").each(function () {
